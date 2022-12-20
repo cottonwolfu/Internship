@@ -15,7 +15,7 @@ const projectId = 'flutterfirebaseseries-82378';
 
 void main() {
   Firestore.initialize(projectId);
-  runApp(MaterialApp(title: "abc", home: FireStoreHome()));
+  runApp(MaterialApp(title: "abc", home: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
