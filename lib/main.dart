@@ -6,6 +6,7 @@ import 'dart:ui';
 
 // import 'package:fluent_ui/fluent_ui.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 // import 'package:fluent_ui/fluent_ui.dart';
 import 'package:firedart/firedart.dart';
@@ -15,7 +16,7 @@ const projectId = 'flutterfirebaseseries-82378';
 
 void main() {
   Firestore.initialize(projectId);
-  runApp(MaterialApp(title: "abc", home: MyApp()));
+  runApp(MaterialApp(title: "abc", home: LoginPage()));
 }
 
 class MyApp extends StatelessWidget {
@@ -225,6 +226,29 @@ class _FireStoreHomeState extends State<FireStoreHome> {
               },
               child: const Text('List User'))
         ]),
+      ),
+    );
+  }
+}
+
+class LoginPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 300,
+      width: 300,
+      color: Colors.white,
+      child: Column(
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          Flex(
+            direction: Axis.horizontal,
+            children: [
+              Expanded(flex: 1, child: Image.asset("lib/Img/youyou.jpg")),
+              Expanded(child: Text("miaomiaomiao"))
+            ],
+          )
+        ],
       ),
     );
   }
